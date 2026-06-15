@@ -2,8 +2,53 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+        mc:Ignorable="d" d:DesignWidth="450" d:DesignHeight="600"
         x:Class="RapidPack.MainWindow"
-        Title="RapidPack">
-    Welcome to Avalonia!
+        Title="RapidPack – System Wyceny Przesyłek"
+        Width="450" Height="600"
+        WindowStartupLocation="CenterScreen">
+    
+    <Grid Margin="20" RowDefinitions="Auto, *, Auto">
+        <TextBlock Grid.Row="0" Text="RapidPack – Kalkulator Opłat" FontSize="22" FontWeight="Bold" HorizontalAlignment="Center" Margin="0,0,0,20"/>
+        
+        <StackPanel Grid.Row="1" Spacing="12">
+            <Grid ColumnDefinitions="140, *">
+                <TextBlock Grid.Column="0" Text="Waga (kg):" VerticalAlignment="Center"/>
+                <TextBox Grid.Column="1" x:Name="WeightTextBox" Watermark="np. 15.5"/>
+            </Grid>
+            <Grid ColumnDefinitions="140, *">
+                <TextBlock Grid.Column="0" Text="Wysokość (cm):" VerticalAlignment="Center"/>
+                <TextBox Grid.Column="1" x:Name="HeightTextBox" Watermark="np. 40"/>
+            </Grid>
+            <Grid ColumnDefinitions="140, *">
+                <TextBlock Grid.Column="0" Text="Szerokość (cm):" VerticalAlignment="Center"/>
+                <TextBox Grid.Column="1" x:Name="WidthTextBox" Watermark="np. 50"/>
+            </Grid>
+            <Grid ColumnDefinitions="140, *">
+                <TextBlock Grid.Column="0" Text="Głębokość (cm):" VerticalAlignment="Center"/>
+                <TextBox Grid.Column="1" x:Name="DepthTextBox" Watermark="np. 45"/>
+            </Grid>
+            <Grid ColumnDefinitions="140, *">
+                <TextBlock Grid.Column="0" Text="Typ przesyłki:" VerticalAlignment="Center"/>
+                <ComboBox Grid.Column="1" x:Name="TypeComboBox" HorizontalAlignment="Stretch" SelectedIndex="0">
+                    <ComboBoxItem Content="Standardowa"/>
+                    <ComboBoxItem Content="Ostrożnie (szkło)"/>
+                    <ComboBoxItem Content="Paleta"/>
+                </ComboBox>
+            </Grid>
+            <Grid ColumnDefinitions="140, *">
+                <TextBlock Grid.Column="0" Text="Usługi dodatkowe:" VerticalAlignment="Center"/>
+                <CheckBox Grid.Column="1" x:Name="ExpressCheckBox" Content="Przesyłka Ekspresowa (+15 zł)"/>
+            </Grid>
+            
+            <Button Content="Wyceń" Click="OnCalculateClick" HorizontalAlignment="Stretch" HorizontalContentAlignment="Center" Padding="12" FontSize="16" FontWeight="Bold" Margin="0,15,0,0"/>
+        </StackPanel>
+        
+        <Grid Grid.Row="2" Background="#2b2b2b" Margin="0,15,0,0">
+            <StackPanel Margin="15">
+                <TextBlock Text="PODSUMOWANIE ZLECENIA" FontWeight="Bold" Foreground="White" Margin="0,0,0,8"/>
+                <TextBlock x:Name="ResultTextBlock" Text="Wprowadź poprawne dane przesyłki i kliknij przycisk 'Wyceń'." TextWrapping="Wrap" FontSize="14" Foreground="#dcdcdc"/>
+            </StackPanel>
+        </Grid>
+    </Grid>
 </Window>
