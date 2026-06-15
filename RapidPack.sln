@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RapidPack", "RapidPack\RapidPack.csproj", "{6B96EC2B-33B0-447B-AFAD-564C8E1E082B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RapidPack.Tests", "RapidPack.Tests\RapidPack.Tests.csproj", "{C31FC36A-1936-4E48-9EF8-4BB605DAECA4}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6B96EC2B-33B0-447B-AFAD-564C8E1E082B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6B96EC2B-33B0-447B-AFAD-564C8E1E082B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6B96EC2B-33B0-447B-AFAD-564C8E1E082B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6B96EC2B-33B0-447B-AFAD-564C8E1E082B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C31FC36A-1936-4E48-9EF8-4BB605DAECA4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C31FC36A-1936-4E48-9EF8-4BB605DAECA4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C31FC36A-1936-4E48-9EF8-4BB605DAECA4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C31FC36A-1936-4E48-9EF8-4BB605DAECA4}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
